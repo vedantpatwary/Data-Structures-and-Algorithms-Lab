@@ -1,0 +1,14 @@
+compile:	tree.o imple.o main.o use.o
+	gcc -g tree.o main.o imple.o use.o -o test
+
+tree.o:	tree.c
+	gcc -g -c tree.c
+
+imple.o:	imple.c
+	gcc -g -c imple.c
+
+main.o:	main.c
+	gcc -g -c main.c
+
+use.o:	use.c
+	gcc -g -c use.c

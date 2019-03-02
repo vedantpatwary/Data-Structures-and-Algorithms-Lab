@@ -1,0 +1,27 @@
+compileLL:	main.o	iterLL.o treeLL.o
+	gcc -g main.o iterLL.o treeLL.o -o testLL 
+
+runLL:
+	./testLL
+
+compileArr:	main.o	iterArr.o treeArr.o
+	gcc -g main.o iterArr.o treeArr.o -o testArr 
+
+runLL:
+	./testArr
+
+main.o:	main.c
+	gcc -g -c main.c
+
+iterLL.o:	iterLL.c
+	gcc -g -c iterLL.c
+
+treeLL.o:	treeLL.c
+	gcc -g -c treeLL.c
+
+iterArr.o:	iterArr.c
+	gcc -g -c iterArr.c
+
+treeLL.o:	treeArr.c
+	gcc -g -c treeArr.c
+

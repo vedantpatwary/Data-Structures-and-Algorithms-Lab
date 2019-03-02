@@ -1,0 +1,23 @@
+#include "header.h"
+
+int main(void){
+	FILE *fp = fopen("10","r");
+	if(fp == NULL){
+		printf("unable to open file");
+		return 0;
+	}
+	Credit cre = (Credit)malloc(sizeof(struct credit));
+	int x;
+	while(fp != NULL){
+	Credit cre = (Credit)malloc(sizeof(struct credit));
+	x = fscanf(fp,"%li,%[A-Z],%d/%d,%[a-z],%s",&cre->card_no,cre->bank_co,&cre->exp_m,&cre->exp_y,cre->fname,cre->lname);
+	printf("%d\n",x);
+	printf("%li\n",cre->card_no);
+	printf("%s\n",cre->bank_co);
+	printf("%d\n",cre->exp_m);
+	printf("%d\n",cre->exp_y);
+	printf("%s\n",cre->fname);
+	printf("%s\n",cre->lname);
+	}
+	fclose(fp);
+}
